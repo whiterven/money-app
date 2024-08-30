@@ -1,4 +1,3 @@
-// app/page.tsx
 import { Suspense } from 'react';
 import AccountBalance from './components/AccountBalance';
 import ActionButtons from './components/ActionButtons';
