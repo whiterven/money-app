@@ -1,4 +1,3 @@
-// app/components/AccountBalance.tsx
 'use client';
 
 import { useState, useEffect } from 'react';
