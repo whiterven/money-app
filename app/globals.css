@@ -3,10 +3,3 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-// next.config.js
-/** @type {import('next').NextConfig} */
-const nextConfig = {}
-
-module.exports = nextConfig
