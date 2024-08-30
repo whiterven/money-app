@@ -1,4 +1,3 @@
-// app/components/TransactionModal.tsx
 'use client';
 
 import { useState } from 'react';
