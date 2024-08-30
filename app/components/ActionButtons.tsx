@@ -1,6 +1,9 @@
 'use client';
 
+import { motion } from 'framer-motion';
 import { useTransactionStore } from '../stores/transactionStore';
+
+const actions = ['Pay', 'Receive', 'Withdraw', 'Add funds'];
 
 export default function ActionButtons() {
   const { setCurrentAction, setIsModalOpen } = useTransactionStore();
@@ -12,14 +15,19 @@ export default function ActionButtons() {
 
   return (
     <div className="grid grid-cols-2 gap-4">
-      {['Pay', 'Receive', 'Withdraw', 'Add funds'].map((action) => (
-        <button
+      {actions.map((action, index) => (
+        <motion.button
           key={action}
           onClick={() => handleAction(action)}
-          className="bg-white text-purple-600 font-bold py-3 px-6 rounded-full shadow-lg hover:bg-purple-100 transition duration-300"
+          className="bg-gray-700 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-gray-600 transition duration-300"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: index * 0.1 }}
         >
           {action}
-        </button>
+        </motion.button>
       ))}
     </div>
   );
