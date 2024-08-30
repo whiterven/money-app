@@ -1,4 +1,3 @@
-// app/stores/transactionStore.ts
 import { create } from 'zustand';
 
 interface TransactionStore {
